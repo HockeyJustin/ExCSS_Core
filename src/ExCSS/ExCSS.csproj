@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
     <AssemblyName>ExCSS</AssemblyName>
     <PackageId>ExCSS-Core</PackageId>
     <Title>ExCSS .NET Stylesheet Parser</Title>
@@ -19,6 +19,22 @@
 4.0.1 - StyleRules made easier to access.
 4.0.0 - Fork of ExCss, udpated to .NET Standard and numerous methods/properties made public to make it usable in the real world.</PackageReleaseNotes>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net452'">
+    <Title>ExCSS-Core for .Net Framework 4.5.2</Title>
+    <DefineConstants>$(DefineConstants);NETFULL;NET452</DefineConstants>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <Title>ExCSS-Core for .Net Standard 2.0</Title>
+    <DefineConstants>$(DefineConstants);NETSTANDARD;NETSTANDARD20</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)'=='net452'">
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Properties\" />
