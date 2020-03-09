@@ -179,6 +179,7 @@ namespace ExCSS
             AddLonghand(PropertyNames.Display, () => new DisplayProperty());
             AddLonghand(PropertyNames.EmptyCells, () => new EmptyCellsProperty());
             AddLonghand(PropertyNames.Fill, () => new FillProperty(), true);
+            AddLonghand(PropertyNames.FillOpacity, () => new FillOpacityProperty(), true);
             AddLonghand(PropertyNames.Float, () => new FloatProperty());
 
             AddShorthand(PropertyNames.Font, () => new FontProperty(),

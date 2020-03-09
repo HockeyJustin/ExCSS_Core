@@ -102,5 +102,32 @@
 			Assert.True(concrete.HasValue);
 			Assert.Equal("url(\"#linear\")", concrete.Value);
 		}
+
+		[Fact]//[Test]
+		public void FillOpacitytNumberLegal()
+		{
+			var snippet = "fill-opacity: 0.5";
+			var property = ParseDeclaration(snippet);
+			Assert.Equal("fill-opacity", property.Name);
+			Assert.False(property.IsImportant);
+			Assert.IsType<FillOpacityProperty>(property);
+			var concrete = (FillOpacityProperty)property;
+			Assert.False(concrete.IsInherited);
+			Assert.True(concrete.HasValue);
+			Assert.Equal("0.5", concrete.Value);
+		}
+
+		[Fact]//[Test]
+		public void FillOpacityNumberNumberIllegal()
+		{
+			var snippet = "fill-opacity: 0.5 0.5";
+			var property = ParseDeclaration(snippet);
+			Assert.Equal("fill-opacity", property.Name);
+			Assert.False(property.IsImportant);
+			Assert.IsType<FillOpacityProperty>(property);
+			var concrete = (FillOpacityProperty)property;
+			Assert.False(concrete.IsInherited);
+			Assert.False(concrete.HasValue);
+		}
 	}
 }
