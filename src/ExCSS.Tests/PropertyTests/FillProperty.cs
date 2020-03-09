@@ -129,5 +129,46 @@
 			Assert.False(concrete.IsInherited);
 			Assert.False(concrete.HasValue);
 		}
+
+		[Fact]//[Test]
+		public void FillRuleNonzeroLegal()
+		{
+			var snippet = "fill-rule: nonzero";
+			var property = ParseDeclaration(snippet);
+			Assert.Equal("fill-rule", property.Name);
+			Assert.False(property.IsImportant);
+			Assert.IsType<FillRuleProperty>(property);
+			var concrete = (FillRuleProperty)property;
+			Assert.False(concrete.IsInherited);
+			Assert.True(concrete.HasValue);
+			Assert.Equal("nonzero", concrete.Value);
+		}
+
+		[Fact]//[Test]
+		public void FillRuleEvenoddLegal()
+		{
+			var snippet = "fill-rule: evenodd";
+			var property = ParseDeclaration(snippet);
+			Assert.Equal("fill-rule", property.Name);
+			Assert.False(property.IsImportant);
+			Assert.IsType<FillRuleProperty>(property);
+			var concrete = (FillRuleProperty)property;
+			Assert.False(concrete.IsInherited);
+			Assert.True(concrete.HasValue);
+			Assert.Equal("evenodd", concrete.Value);
+		}
+
+		[Fact]//[Test]
+		public void FillRuleNoneIllegal()
+		{
+			var snippet = "fill-rule: none";
+			var property = ParseDeclaration(snippet);
+			Assert.Equal("fill-rule", property.Name);
+			Assert.False(property.IsImportant);
+			Assert.IsType<FillRuleProperty>(property);
+			var concrete = (FillRuleProperty)property;
+			Assert.False(concrete.IsInherited);
+			Assert.False(concrete.HasValue);
+		}
 	}
 }
