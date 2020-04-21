@@ -27,7 +27,7 @@ namespace ExCSS
                     length = text.Length - start;
                 }
 
-                return text.Substring(start, length).Trim();
+                return text.Substring(start, length);
             }
         }
     }

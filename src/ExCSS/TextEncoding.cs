@@ -57,10 +57,18 @@ namespace ExCSS
 
         private static Encoding GetEncoding(string name)
         {
-            if (AvailableEncodings.Contains(name))
+            try
             {
-                return Encoding.GetEncoding(name);
+                if (AvailableEncodings.Contains(name))
+                {
+                    return Encoding.GetEncoding(name);
+                }
+               
             }
+            catch
+            {
+            }
+            
 
             // Catch all since WP8 does throw a different exception than W*.
             return Utf8;
