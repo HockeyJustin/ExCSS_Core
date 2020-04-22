@@ -8,14 +8,15 @@
     <Authors>Justin Jones (updates) / Tyler Brinks (original)</Authors>
     <Description>Continuation of Tyler Brinks's great work for CSS Parsing. I contacted him to help with the original project, but he is not responding and not including fixes atm. ExCSS is a CSS 2.1 and CSS 3 parser for .NET Core. ExCSS makes it easy to read and parse stylesheets into a friendly object model with full LINQ support. Namespace remains ExCSS.</Description>
     <RepositoryUrl>https://github.com/HockeyJustin/ExCSS_Core</RepositoryUrl>
-    <PackageVersion>4.0.4</PackageVersion>
+    <PackageVersion>4.0.5</PackageVersion>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>4.0.4</Version>
-    <PackageReleaseNotes>4.0.4 - MIT Licence Added. No code changes.
+    <Version>4.0.5</Version>
+    <PackageReleaseNotes>4.0.5 - PR included for better SVG handling
+4.0.4 - MIT Licence Added. No code changes.
 4.0.3 - Merge pull request for better handling of important properties.
 4.0.2 - Metadata update only.
 4.0.1 - StyleRules made easier to access.
