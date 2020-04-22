@@ -19,9 +19,9 @@ namespace ExCSS.Tests
 			var stylesheet = new ExCSS.StylesheetParser().Parse(css);
 
 			// Get the info out - long hand
-			//var info = stylesheet.Children.First(c => ((ExCSS.StyleRule)c).SelectorText == "html") as ExCSS.StyleRule;
-			//var selector = info.SelectorText;
-			//var firstCssProperty = info.Style.BackgroundColor;
+			// var info = stylesheet.Children.First(c => ((ExCSS.StyleRule)c).SelectorText == "html") as ExCSS.StyleRule;
+			// var selector = info.SelectorText;
+			// var firstCssProperty = info.Style.BackgroundColor;
 
 			// Get the info out - New way
 			var info = stylesheet.StyleRules.First() as ExCSS.StyleRule;
