@@ -48,6 +48,10 @@ namespace ExCSS
                     SimpleSelector.PseudoClass( PseudoClassNames.OnlyChild)
                 },
                 {
+                    PseudoClassNames.First,
+                    SimpleSelector.PseudoClass( PseudoClassNames.First)
+                },
+                {
                     PseudoClassNames.FirstChild,
                     SimpleSelector.PseudoClass( PseudoClassNames.FirstChild)
                 },

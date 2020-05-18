@@ -8,6 +8,7 @@
         public static readonly string FirstOfType = "first-of-type";
         public static readonly string LastOfType = "last-of-type";
         public static readonly string OnlyChild = "only-child";
+        public static readonly string First = "first";
         public static readonly string FirstChild = "first-child";
         public static readonly string LastChild = "last-child";
         public static readonly string Empty = "empty";
