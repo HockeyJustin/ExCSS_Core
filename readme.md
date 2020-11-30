@@ -1,10 +1,9 @@
 # ExCSS With Updates for .NET Core
 
-[ExCSS v3](https://github.com/TylerBrinks/ExCSS) could be great (as v2 was), but needed some changes from the current master to make it useable (just a couple of bit's made public and moved to .NET Standard 2.0).
+These changes have been merged into [ExCSS](https://github.com/HockeyJustin/ExCSS_Core/issues/16). Please use the main repository 
 
-I've made the changes here as the pull requests don't seem to be getting incorporated at the moment.
+[ExCSS](https://github.com/TylerBrinks/ExCSS) 
 
-If the changes are made to the main repro (I've asked to be a contributor), this will be deleted.
 
 ## Example usage (simple)
 
